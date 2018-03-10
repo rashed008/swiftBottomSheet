@@ -10,7 +10,7 @@ import UIKit
 import ISHPullUp
 
 class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegate {
-
+    
     
     
     @IBOutlet private weak var handleView: ISHPullUpHandleView!
@@ -18,7 +18,7 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var topLabel: UILabel!
     @IBOutlet private weak var topView: UIView!
-//    @IBOutlet private weak var buttonLock: UIButton?
+    //    @IBOutlet private weak var buttonLock: UIButton?
     
     private var firstAppearanceCompleted = false
     weak var pullUpController: ISHPullUpViewController!
@@ -31,7 +31,7 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
         topView.addGestureRecognizer(tapGesture)
         
-//        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.getSwipeAction(_:)))
+        //        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(self.getSwipeAction(_:)))
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,10 +58,10 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
     //        pullUpController.bottomViewController = webVC
     //    }
     
-//    @IBAction private func buttonTappedLock(_ sender: AnyObject) {
-//        pullUpController.isLocked  = !pullUpController.isLocked
-//        buttonLock?.setTitle(pullUpController.isLocked ? "Unlock" : "Lock", for: .normal)
-//    }
+    //    @IBAction private func buttonTappedLock(_ sender: AnyObject) {
+    //        pullUpController.isLocked  = !pullUpController.isLocked
+    //        buttonLock?.setTitle(pullUpController.isLocked ? "Unlock" : "Lock", for: .normal)
+    //    }
     
     // MARK: ISHPullUpSizingDelegate
     
@@ -75,13 +75,18 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
         return totalHeight
     }
     
-    func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, minimumHeightForBottomViewController bottomVC: UIViewController) -> CGFloat {
-        return topView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height;
+    func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, minimumHeightForBottomViewController bottomVC: UIViewController) -> CGFloat{
+        return 200
     }
+    
+    
+    //    func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, minimumHeightForBottomViewController bottomVC: UIViewController) -> CGFloat {
+    //        return topView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height;
+    //    }
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, targetHeightForBottomViewController bottomVC: UIViewController, fromCurrentHeight height: CGFloat) -> CGFloat {
         // if around 30pt of the half way point -> snap to it
-        if abs(height - halfWayPoint) < 40 {
+        if abs(height - halfWayPoint) < 30 {
             return halfWayPoint
         }
         
@@ -95,6 +100,9 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
         scrollView.contentInset = edgeInsets;
     }
     
+    
+    
+    
     // MARK: ISHPullUpStateDelegate
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, didChangeTo state: ISHPullUpState) {
@@ -104,7 +112,7 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
         // Hide the scrollview in the collapsed state to avoid collision
         // with the soft home button on iPhone X
         UIView.animate(withDuration: 0.25) { [weak self] in
-            self?.scrollView.alpha = (state == .collapsed) ? 0 : 1;
+            self?.scrollView.alpha = (state == .collapsed) ? 0.40 : 1;
         }
     }
     
@@ -120,7 +128,7 @@ class BottomVC: UIViewController, ISHPullUpSizingDelegate, ISHPullUpStateDelegat
             return "Drag down or tap"
         }
     }
-
+    
 }
 
 
