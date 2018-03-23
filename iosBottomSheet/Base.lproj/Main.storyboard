@@ -98,24 +98,23 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PullUP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-w8-94a">
-                                                        <rect key="frame" x="137" y="37" width="109" height="38"/>
+                                                        <rect key="frame" x="128" y="37" width="120" height="38"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="38" id="pCy-J4-ugb"/>
-                                                            <constraint firstAttribute="width" constant="109" id="rOB-uk-uEy"/>
+                                                            <constraint firstAttribute="width" constant="120" id="ERN-48-QSf"/>
+                                                            <constraint firstAttribute="height" constant="38" id="kkM-v9-sEz"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="tU8-xy-avt" secondAttribute="bottom" constant="32" id="0LZ-jU-ShS"/>
-                                                    <constraint firstAttribute="bottom" secondItem="dTS-w8-94a" secondAttribute="bottom" constant="17" id="90b-8R-4OT"/>
-                                                    <constraint firstItem="dTS-w8-94a" firstAttribute="top" secondItem="Xo0-Fg-69p" secondAttribute="top" constant="37" id="Dgq-uO-qT5"/>
                                                     <constraint firstItem="tU8-xy-avt" firstAttribute="top" secondItem="Xo0-Fg-69p" secondAttribute="top" constant="9" id="Zxd-Fb-adX"/>
-                                                    <constraint firstItem="dTS-w8-94a" firstAttribute="leading" secondItem="Xo0-Fg-69p" secondAttribute="leading" constant="137" id="dQj-SE-saY"/>
+                                                    <constraint firstItem="dTS-w8-94a" firstAttribute="top" secondItem="Xo0-Fg-69p" secondAttribute="top" constant="37" id="mQa-YO-kI1"/>
                                                     <constraint firstItem="tU8-xy-avt" firstAttribute="centerX" secondItem="Xo0-Fg-69p" secondAttribute="centerX" id="neu-Hn-A2v"/>
-                                                    <constraint firstAttribute="trailing" secondItem="dTS-w8-94a" secondAttribute="trailing" constant="129" id="vQ8-1y-Bok"/>
+                                                    <constraint firstItem="dTS-w8-94a" firstAttribute="centerX" secondItem="Xo0-Fg-69p" secondAttribute="centerX" id="tBz-Su-yN9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dTS-w8-94a" secondAttribute="bottom" constant="17" id="vXx-US-bTW"/>
                                                 </constraints>
                                             </view>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq6-TD-Pes">
